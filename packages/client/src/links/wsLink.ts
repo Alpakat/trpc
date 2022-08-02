@@ -122,7 +122,7 @@ export function createWSClient(opts: WebSocketClientOptions) {
   }
 
   function createWS() {
-    const conn = new WebSocketImpl(url);
+    const conn = new WebSocketImpl(url, [], {headers: {test: "t"}});
     clearTimeout(connectTimer as any);
     connectTimer = null;
 
